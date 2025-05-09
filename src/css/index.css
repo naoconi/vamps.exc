@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*, html, body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: rgb(6, 6, 6);
+    --base-variant:  rgb(15, 19, 23);
+    --text-color: rgb(222, 222, 222);
+    --secondary-text: rgb(107, 107, 107);
+    --primary-color:  rgb(228, 228, 228);
+    --accent-color: rgb(145, 145, 255);
+    --button-color: rgb(216, 216, 216);
+    --bar-color: rgb(26, 26, 26);
+    --profile-color: rgb(222, 222, 222);
+    --title-color: white;
+}
+
+.darkmode {
+    --base-color: rgb(51, 51, 51);
+    --base-variant:  rgb(242, 242, 242);
+    --text-color: rgb(42, 42, 42);
+    --secondary-text: rgb(81, 81, 81);
+    --primary-color:  rgb(65, 65, 65);
+    --accent-color: rgb(117, 117, 251);
+    --button-color: rgb(200, 200, 200);
+    --bar-color: rgb(22, 22, 22);
+    --profile-color: transparent;
+}
+
+.mode > button {
+    border: none;
+}
+
+
+#theme-switch{
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0px 0px 5px black;
+}
+
+#theme-switch svg{
+    fill: var(--primary-color);
+    width: 18px;
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+
+
+/* MAIN BODY */
+
+.fContainer {
+    width: 100%;
+    height: 140vh;
+    background-color:var(--base-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    color:  var(--title-color);
+    font-family: "ubuntu", sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 280px 330px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+@media (max-width: 829px) {
+    .grid {
+        grid-template-columns: 290px;
+    }
+}
+
+
+/* LAYOUT GRID */
+
+
+.l-t-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--base-variant);
+    height: 390px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.r-t-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--base-variant);
+    height: 270px;
+    border-radius: 20px;
+    padding: 30px;
+    cursor: default;
+}
+
+/* .c-l-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 19, 23);
+    height: 170px;
+} */
+
+.c-r-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-variant);
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+
+/* CONTENT */
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    .profile > img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: var(--profile-color);
+    }
+
+.username {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    font-family: "ubuntu sans", sans-serif;
+    text-align: center;
+}
+
+    .username > a {
+        text-decoration: none;
+        color:var(--text-color);
+        font-weight: 900;
+    }
+
+        .username > span {
+            color: var(--secondary-text);
+            font-size: 10px;
+            width: 130px;
+            cursor: default;
+        }
+
+
+.link {
+    margin-top: 22px;
+}
+
+    .link > a > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:var(--button-color);
+        border: none;
+        font-size: 9px;
+        width: 180px;
+        height: 34px;
+        border-radius: 15px;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .link > a > button:hover {
+        background-color: var(--accent-color);
+        transition: all .2s ease-in-out;
+    }
+
+        .link > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            padding: 4px;
+            text-decoration: none;
+        }
+
+            .link > a > button > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 3px;
+            }
+
+            .link > a > button > img {
+                width: 10px;
+                height: 10px;
+            }
+
+
+
+.title-charts {
+    color: var(--text-color);
+    font-family: "ubuntu", sans-serif;
+    font-weight: 900;
+}
+
+.title-info {
+    color: var(--secondary-text);
+    font-family: "ubuntu", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-size: 10px;
+}
+
+.charts-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+    .charts-wrapper > h2 {
+        color: var(--text-color);
+        font-family: "ubuntu", sans-serif;
+        font-size: 7px;
+        padding-top: 6px;
+        padding-bottom: 3px;
+        font-weight: 500;
+    }
+
+
+.charts-bar {
+    background-color: var(--bar-color);
+    width: 100%;
+    height: 10px;
+    border-radius: 3px;
+}
+
+    .charts-bar > div {
+        height: 10px;
+        border-radius: 3px;
+        background-color:transparent;
+        width: 0%;
+        color: var(--base-color);
+        font-size: 6px;
+    }
+
+.amv {
+    font-family: "ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    font-weight: 800;
+    animation: amv 1s linear forwards;
+    animation-delay: 0.10s;
+}
+
+.gfx {
+    font-family: "ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    font-weight: 800;
+    animation: gfx 1s linear forwards;
+    animation-delay: 0.20s;
+}
+
+.ae {
+    font-family: "ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    font-weight: 800;
+    animation: ae 1s linear forwards;
+    animation-delay: 0.30s;
+}
+
+.ps {
+    font-family: "ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    font-weight: 800;
+    animation: ps 1s linear forwards;
+    animation-delay: 0.40s;
+}
+
+.am {
+    font-family: "ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    font-weight: 800;
+    animation: am 1s linear forwards;
+    animation-delay: 0.50s;
+}
+
+
+
+    .amv > span {
+        color: transparent;
+        animation: texth2 1s linear forwards;
+        animation-delay: 0.20s;
+    }
+
+    .gfx > span {
+        color: transparent;
+        animation: texth2 1s linear forwards;
+        animation-delay: 0.30s;
+    }
+
+    .ae > span {
+        color: transparent;
+        animation: texth2 1s linear forwards;
+        animation-delay: 0.40s;
+    }
+
+    .ps > span {
+        color: transparent;
+        animation: texth2 1s linear forwards;
+        animation-delay: 0.50s;
+    }
+
+    .am > span {
+        color: transparent;
+        animation: texth2 1s linear forwards;
+        animation-delay: 0.60s;
+    }
+
+
+
+
+        @keyframes amv {
+            100%{
+                width: 40%;
+                background-color: rgb(255, 79, 73);
+            }
+        }
+
+        @keyframes gfx {
+            100%{
+                width: 60%;
+                background-color: rgb(33, 0, 197);
+            }
+        }
+
+        @keyframes ae {
+            100%{
+                width: 57%;
+                background-color: rgb(118, 118, 118);
+            }
+        }
+
+        @keyframes ps {
+            100%{
+                width: 50%;
+                background-color: rgb(71, 71, 71);
+            }
+        }
+
+        @keyframes am {
+            100%{
+                width: 78%;
+                background-color: rgb(162, 162, 162);
+            }
+        }
+
+        @keyframes texth2 {
+            100%{
+                color: white;
+            }
+        }
