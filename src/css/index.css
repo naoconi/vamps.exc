@@ -199,7 +199,7 @@
 }
 
 .solid-bottom {
-    background-color: rgb(41, 41, 41);
+    background-color: var(--secondary-text);
     width: 100px;
     height: 4px;
     border-radius: 50px;
