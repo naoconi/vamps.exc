@@ -55,6 +55,7 @@
     --title-color: white;
     --btn-color: rgb(30, 38, 46);
     --primary-title: rgb(242, 242, 242);
+    --tiny-color: white;
 }
 
 .darkmode {
@@ -70,6 +71,7 @@
     --title-color: rgb(254, 254, 254);
     --btn-color: rgb(32, 32, 32);
     --primary-title: rgb(255, 255, 255);
+    --tiny-color: rgb(252, 252, 252);
 }
 
 .mode > button {
@@ -160,6 +162,9 @@
     }
     .navbar {
         width: 320px;
+    }
+    .alert-wrapper {
+        display: none;
     }
 }
 
@@ -450,6 +455,7 @@
 
 
             .entry-popup {
+                cursor: default;
                 position: fixed;
                 top: -150%;
                 left: 50%;
@@ -511,6 +517,15 @@
                     padding-bottom: 2px;
                 }
 
+                    .form-element > label > span {
+                        opacity: 20%;
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-size: 8px;
+                        color: var(--tiny-color);
+                        display: flex;
+                        align-items: center;
+                    }
+
                     .form-element > input {
                         border: none;
                         outline: none;
@@ -547,7 +562,7 @@
                 align-items: center;
                 justify-content: center;
                 margin-top: 10px;
-                color: var(--text-color);
+                color: var(--title-color);
             }
 
             .button-element {
@@ -570,6 +585,42 @@
                     color: rgb(255, 255, 255);
                     cursor: pointer;
                 }
+
+    .alert-wrapper {
+        display: none;
+        left: -5.90%;
+        top: -15%;
+        position: fixed;
+        z-index: 3;
+        cursor: default;
+    }
+
+        .alert {
+            font-family: "ubuntu", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            background-color: var(--btn-color);
+            width: 290px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+            .alert > h2 {
+                color: var(--title-color);
+                font-size: 14px;
+            }
+
+            .alert > span {
+                color: var(--secondary-text);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                text-align: center;
+            }
 
 
 /* CONTENT 3ND */
