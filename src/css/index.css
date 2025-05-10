@@ -338,14 +338,14 @@
         }
 
 .rules-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
     padding-left: 10px;
-    padding-bottom: 1px;
-    font-weight: 400;
-    color: var(--secondary-text);
-    font-size: 9px;
+    color: var(--text-color);
+    font-size: 10px;
     border-left: 1px solid var(--secondary-text);
     margin-left: 2px;
-    margin-bottom: 5px;
 }
 
 
