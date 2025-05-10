@@ -38,3 +38,20 @@ if (
 )
     return false;
 };
+
+
+document.querySelector("#show-login").addEventListener('click', function(){
+    document.querySelector(".entry-popup").classList.add('active');
+});
+
+document.querySelector(".entry-popup .close-btn").addEventListener('click', function(){
+    document.querySelector(".entry-popup").classList.remove('active');
+});
+
+document.querySelector("#show-login").addEventListener('click', function(){
+    document.querySelector(".close-btn").classList.add('active');
+});
+
+document.querySelector(".entry-popup .close-btn").addEventListener('click', function(){
+    document.querySelector(".close-btn").classList.remove('active');
+});
