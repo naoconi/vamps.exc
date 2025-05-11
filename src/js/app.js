@@ -68,22 +68,22 @@ document.querySelector(".entry-popup .close-btn").addEventListener('click', func
 
 
 
-document.querySelector("#list-entry").addEventListener('click', function(){
-    document.querySelector(".list-entry-popup").classList.add('active');
-});
+// document.querySelector("#list-entry").addEventListener('click', function(){
+//     document.querySelector(".list-entry-popup").classList.add('active');
+// });
 
-document.querySelector(".list-entry-popup .close-btn-list").addEventListener('click', function(){
-    document.querySelector(".list-entry-popup").classList.remove('active');
-});
+// document.querySelector(".list-entry-popup .close-btn-list").addEventListener('click', function(){
+//     document.querySelector(".list-entry-popup").classList.remove('active');
+// });
 
 
-document.querySelector("#list-entry").addEventListener('click', function(){
-    document.querySelector(".close-btn-list").classList.add('active');
-});
+// document.querySelector("#list-entry").addEventListener('click', function(){
+//     document.querySelector(".close-btn-list").classList.add('active');
+// });
 
-document.querySelector(".list-entry-popup .close-btn-list").addEventListener('click', function(){
-    document.querySelector(".close-btn-list").classList.remove('active');
-});
+// document.querySelector(".list-entry-popup .close-btn-list").addEventListener('click', function(){
+//     document.querySelector(".close-btn-list").classList.remove('active');
+// });
 
 
 

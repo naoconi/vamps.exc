@@ -617,7 +617,7 @@
 
     .alert-wrapper {
         display: none;
-        left: -5.90%;
+        left: 10%;
         top: -15%;
         position: fixed;
         z-index: 3;
@@ -632,9 +632,9 @@
             flex-direction: column;
             padding: 10px;
             background-color: var(--btn-color);
-            width: 290px;
+            width: 210px;
             height: 40px;
-            border-radius: 20px;
+            border-radius: 10px;
         }
 
             .alert > h2 {
