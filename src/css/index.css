@@ -577,13 +577,22 @@
             }
 
             .title-entry {
-                font-size: 8px;
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                margin-top: 10px;
-                color: var(--title-color);
+                align-items: center;
+                color: rgb(253, 0, 0);
             }
+
+                .title-entry > span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 10px;
+                    color: var(--title-color);
+                    font-size: 8px;
+                    padding-left: 2px;
+                    text-align: center;
+                }
 
             .button-element {
                 display: flex;
