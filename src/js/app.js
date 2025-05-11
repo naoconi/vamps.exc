@@ -21,23 +21,23 @@ themeSwitch.addEventListener("click", () => {
 
 
 
-// document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-// function ctrlShiftKey(e, keyCode) {
-// return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-// }
+function ctrlShiftKey(e, keyCode) {
+return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
 
-// document.onkeydown = (e) => {
+document.onkeydown = (e) => {
     
-// if (
-//     event.keyCode === 123 ||
-//     ctrlShiftKey(e, 'I') ||
-//     ctrlShiftKey(e, 'J') ||
-//     ctrlShiftKey(e, 'C') ||
-//     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-// )
-//     return false;
-// };
+if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+)
+    return false;
+};
 
 
 document.querySelector("#show-login").addEventListener('click', function(){
@@ -55,6 +55,10 @@ document.querySelector("#show-login").addEventListener('click', function(){
 document.querySelector(".entry-popup .close-btn").addEventListener('click', function(){
     document.querySelector(".close-btn").classList.remove('active');
 });
+
+
+
+
 
 
 

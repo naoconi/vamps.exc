@@ -210,11 +210,11 @@
     justify-content: center;
     align-items: center;
     background-color: var(--base-variant);
-    height: 520px;
-    border-radius: 20px;
+    height: 510px;
+    border-radius: 30px;
     padding: 30px;
     cursor: default;
-    margin-top: 30px;
+    margin-top: 20px;
     animation-name: fade, slide;
     animation-duration: 1s; 
     animation-delay: 0.40s;
@@ -419,6 +419,12 @@
     margin-left: 2px;
 }
 
+    .rules-info > div > a {
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: 600;
+    }
+
 
 .button-entry {
     margin-top: 10px;
@@ -622,6 +628,23 @@
                 text-align: center;
             }
 
+
+                /* LIST ENTRY */
+
+                .list-entry-popup {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgb(52, 52, 52);
+                    width: 260px;
+                    height: 340px;
+                    border-radius: 30px;
+                }
+
+                    .l-entry-wrapper {
+                        padding: 10px;
+                    }
 
 /* CONTENT 3ND */
 
